@@ -20,7 +20,6 @@ struct node
 class BST
 {
     public:
-        void inorder(node *);
                 void preorder(node *);  //darsh;
         void display(node *, int);
         BST()
