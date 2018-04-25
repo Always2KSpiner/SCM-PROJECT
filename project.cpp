@@ -117,6 +117,7 @@ insert(node *tree, node *newnode)
 		}
 	}
 }
+//this code has been completed by using the concepts of binary tree
 //this function is for deleting
 void del(int item)
 {
