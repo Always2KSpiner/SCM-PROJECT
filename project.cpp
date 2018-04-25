@@ -1,6 +1,7 @@
 //This is the intial project file 
 //all work will be done on this
 //i am darsh. i have cloned the repository
+//aseem joined the team
 # include <iostream>
 # include <cstdlib>
 using namespace std;
@@ -134,7 +135,6 @@ void BST::preorder(node *ptr)
         preorder(ptr->left);
        preorder(ptr->right);
     }
-=======
 //this function is for insertion
 void BST::insert(node *tree, node *newnode)
 {
@@ -158,6 +158,72 @@ void BST::insert(node *tree, node *newnode)
 		{
 			insert(tree->left, newnode);
 		}
+};
+/*
+int main()
+{
+    int choice, num;
+    BST bst;
+    node *temp;
+     while (1)
+    {
+        cout<<"-----------------"<<endl;
+        cout<<"Operations on BST"<<endl;
+        cout<<"-----------------"<<endl;
+        cout<<"1.Insert Element "<<endl;
+        cout<<"2.Delete Element "<<endl;
+        cout<<"3.Inorder Traversal"<<endl;
+        cout<<"4.Preorder Traversal"<<endl;
+        cout<<"5.Postorder Traversal"<<endl;
+        cout<<"6.Display"<<endl;
+        cout<<"7.Quit"<<endl;
+        cout<<"Enter your choice : ";
+        cin>>choice;
+         switch(choice)
+        {
+        case 1:
+            temp = new node;
+            cout<<"Enter the number to be inserted : ";
+	    cin>>temp->info;
+            bst.insert(root, temp);
+        case 2:
+            if (root == NULL)
+            {
+                cout<<"Tree is empty, nothing to delete"<<endl;
+                continue;
+            }
+            cout<<"Enter the number to be deleted : ";
+            cin>>num;
+            bst.del(num);
+            break;
+        case 3:
+            cout<<"Inorder Traversal of BST:"<<endl;
+            bst.inorder(root);
+            cout<<endl;
+            break;
+	case 4:
+            cout<<"Preorder Traversal of BST:"<<endl;
+            bst.preorder(root);
+            cout<<endl;
+            break;
+        case 5:
+            cout<<"Postorder Traversal of BST:"<<endl;
+            bst.postorder(root);
+            cout<<endl;
+            break;
+        case 6:
+            cout<<"Display BST:"<<endl;
+            bst.display(root,1);
+            cout<<endl;
+            break;
+        case 7:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+}
+*/
 
 	else
 		{
