@@ -68,6 +68,7 @@ class BST
             root = NULL;
         }
 };
+//this fumction is for insertion
 insert(node *tree, node *newnode)
 {
 	if (root == NULL)
@@ -116,6 +117,7 @@ insert(node *tree, node *newnode)
 		}
 	}
 }
+//this function is for deletion
 void BST::del(int item)
 {
 	node *parent, *location;
