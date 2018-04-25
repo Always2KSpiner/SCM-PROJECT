@@ -12,3 +12,13 @@ struct node
     struct node *left;
     struct node *right;
 }*root;
+class BST
+{
+    public:
+        void inorder(node *);
+        void display(node *, int);
+        BST()
+        {
+            root = NULL;
+        }
+};
