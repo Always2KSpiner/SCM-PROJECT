@@ -7,6 +7,7 @@ using namespace std;
  * Node Declaration
  */
 // commit done by naman
+
 struct node
 {
     int info;
@@ -67,4 +68,27 @@ class BST
             root = NULL;
         }
 };
+void BST::insert(node *tree, node *newnode)
+{
+	if (root == NULL)
+	{
+		root = new node;
+		root->info = newnode->info;
+		root->left = NULL;
+		root->right = NULL;
+		cout << "Root Node is Added" << endl;
+		return;
+	}
+	if (tree->info == newnode->info)
+	{
+		cout << "Element already in the tree" << endl;
+		return;
+	}
+	if (tree->info > newnode->info)
+	{
+		if (tree->left != NULL)
+		{
+			insert(tree->left, newnode);
+		}
+		else
 
