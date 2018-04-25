@@ -68,7 +68,7 @@ class BST
             root = NULL;
         }
 };
-void BST::insert(node *tree, node *newnode)
+insert(node *tree, node *newnode)
 {
 	if (root == NULL)
 	{
@@ -116,4 +116,17 @@ void BST::insert(node *tree, node *newnode)
 		}
 	}
 }
+void BST::del(int item)
+{
+	node *parent, *location;
+	if (root == NULL)
+	{
+		cout << "Tree empty" << endl;
+		return;
+	}
+	find(item, &parent, &location);
+	if (location == NULL)
+	{
+		cout << "Item not present in tree" << endl;
+		return;
 
