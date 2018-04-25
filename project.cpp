@@ -43,6 +43,7 @@ class BST
         cout<<ptr->info<<"  ";
     }
 }
+
         void display(node *ptr, int level)
 {
     int i;
@@ -66,4 +67,4 @@ class BST
             root = NULL;
         }
 };
-
+//ADMIN CODE DONE
