@@ -91,5 +91,26 @@ void BST::preorder(node *ptr)
        preorder(ptr->right);
     }
 }
+//display tree structure
 
- 
+ void BST::display(node *ptr, int level)
+{
+   int i;
+    if (ptr != NULL)
+  {
+        display(ptr->right, level+1);
+        cout<<endl;
+        if (ptr == root)
+            cout<<"Root->:  ";
+
+        else
+
+        {
+            for (i = 0;i < level; i++)
+                cout<<"       ";
+    }
+        cout<<ptr->info;
+       display(ptr->left, level+1);
+    }
+
+}
