@@ -131,4 +131,14 @@ void del(int item)
 	{
 		cout << "Item not present in tree" << endl;
 		return;
-
+	}
+	if (location->left == NULL && location->right == NULL)
+		case_a(parent, location);
+	if (location->left != NULL && location->right == NULL)
+		case_b(parent, location);
+	if (location->left == NULL && location->right != NULL)
+		case_b(parent, location);
+	if (location->left != NULL && location->right != NULL)
+		case_c(parent, location);
+	free(location);
+}
