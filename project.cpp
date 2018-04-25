@@ -250,6 +250,7 @@ int main()
 		}
 	}
 }
+//this code has been completed by using the concepts of binary tree
 //this function is for deleting
 void BST::del(int item)
 {
