@@ -15,7 +15,20 @@ struct node
 class BST
 {
     public:
-        void inorder(node *);
+        void inorder(node *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+    }
+    if (ptr != NULL)
+    {
+        inorder(ptr->left);
+        cout<<ptr->info<<"  ";
+        inorder(ptr->right);
+    }
+}
         void display(node *, int);
         BST()
         {
