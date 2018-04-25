@@ -29,7 +29,24 @@ class BST
         inorder(ptr->right);
     }
 }
-        void display(node *, int);
+        void display(node *ptr, int level)
+{
+    int i;
+    if (ptr != NULL)
+    {
+        display(ptr->right, level+1);
+        cout<<endl;
+        if (ptr == root)
+            cout<<"Root->:  ";
+        else
+        {
+            for (i = 0;i < level;i++)
+                cout<<"       ";
+	}
+        cout<<ptr->info;
+        display(ptr->left, level+1);
+    }
+}
         BST()
         {
             root = NULL;
