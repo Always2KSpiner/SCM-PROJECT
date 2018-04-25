@@ -67,4 +67,9 @@ class BST
             root = NULL;
         }
 };
+int main()
+{
+    int choice, num;
+    BST bst;
+    node *temp;
 
