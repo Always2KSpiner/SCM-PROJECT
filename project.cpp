@@ -74,3 +74,22 @@ int main()
         }
     }
 }
+
+// Pre Order Traversal
+
+void BST::preorder(node *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+   }
+    if (ptr != NULL)
+    {
+        cout<<ptr->info<<"  ";
+        preorder(ptr->left);
+       preorder(ptr->right);
+    }
+}
+
+ 
