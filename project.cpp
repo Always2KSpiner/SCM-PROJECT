@@ -29,7 +29,7 @@ class BST
         }
 };
 
-// A function to heapify the bianry tree.
+// A function to heapify the array.
 void heapify(int arr[], int n, int i)
 {
     int largest = i;  
@@ -68,10 +68,24 @@ void heapSort(int arr[], int n)
         heapify(arr, i, 0);
     }
 }
+/* A utility function to print array of size n */
+void printArray(int arr[], int n)
+{
+    for (int i=0; i<n; ++i)
+        cout << arr[i] << " ";
+    cout << "\n";
+}
+ 
 int main()
 
 {
-
+int arr[] = {12, 11, 13, 5, 6, 7};
+    int n = sizeof(arr)/sizeof(arr[0]);
+ 
+    heapSort(arr, n);
+ 
+    cout << "Sorted array is \n";
+    printArray(arr, n);
     int choice, num;
 
     BST bst;
