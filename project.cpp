@@ -19,10 +19,54 @@ class BST
 {
     public:
         void inorder(node *);
+                void preorder(node *);  //darsh;
         void display(node *, int);
         BST()
         {
             root = NULL;
         }
 };
+int main()
 
+{
+
+    int choice, num;
+
+    BST bst;
+
+    node *temp;
+
+    while (1)
+
+    {
+
+        cout<<"Operations on BST"<<endl;
+        cout<<".................."<<endl;
+        cout<<"1.Preorder Traversal"<<endl;
+        cout<<"2.Display"<<endl;
+        cout<<"Enter your choice : ";
+
+        cin>>choice;
+
+        switch(choice)
+        {
+        case 1:
+
+            cout<<"Preorder Traversal of BST:"<<endl;
+            bst.preorder(root);
+            cout<<endl;
+            break;
+
+        case 2:
+
+            cout<<"Display BST:"<<endl;
+            bst.display(root,1);
+            cout<<endl;
+            break;      
+
+        default:
+
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+}
