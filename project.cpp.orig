@@ -1,15 +1,17 @@
 //This is the intial project file 
 //all work will be done on this
+<<<<<<< HEAD
 //i am darsh. i have cloned the repository
+=======
 //aseem joined the team
-// commit done by naman
-//this code has been completed by using the concepts of binary tree
+>>>>>>> aseem
 # include <iostream>
 # include <cstdlib>
 using namespace std;
 /*
  * Node Declaration
  */
+// commit done by naman
 struct node
 {
     int info;
@@ -19,10 +21,7 @@ struct node
 class BST
 {
     public:
-    	void preorder(node *);  //DARSH;
-        void insert(node *,node *);//NAMAN
-	    void del(int );//NAMAN
-        void inorder(node *ptr)//ANIRUDH
+        void inorder(node *ptr)
 {
     if (root == NULL)
     {
@@ -36,7 +35,7 @@ class BST
         inorder(ptr->right);
     }
 }
-         void postorder(node *ptr)//ANIRUDH
+         void postorder(node *ptr)
 {
     if (root == NULL)
     {
@@ -69,13 +68,17 @@ class BST
         display(ptr->left, level+1);
     }
 }
+        void preorder(node *);  //darsh;
+        void insert(node *,node *)//naman
+	void del(int )//naman
          BST()
         {
             root = NULL;
         }
+<<<<<<< HEAD
 }
 // A function to heapify the array.
-void heapify(int arr[], int n, int i)//DARSH
+void heapify(int arr[], int n, int i)
 {
     int largest = i;  
     int l = 2*i + 1;  
@@ -97,7 +100,7 @@ void heapify(int arr[], int n, int i)//DARSH
     }
 }
 // main function to do heap sort
-void heapSort(int arr[], int n)//DARSH
+void heapSort(int arr[], int n)
 {
     // Build heap (rearrange array)
     for (int i = n / 2 - 1; i >= 0; i--)
@@ -114,7 +117,7 @@ void heapSort(int arr[], int n)//DARSH
     }
 }
 /* A utility function to print array of size n */
-void printArray(int arr[], int n)//DARSH
+void printArray(int arr[], int n)
 {
     for (int i=0; i<n; ++i)
         cout << arr[i] << " ";
@@ -123,7 +126,7 @@ void printArray(int arr[], int n)//DARSH
  
 // Pre Order Traversal
 
-void BST::preorder(node *ptr)//DARSH
+void BST::preorder(node *ptr)
 {
     if (root == NULL)
     {
@@ -136,8 +139,9 @@ void BST::preorder(node *ptr)//DARSH
         preorder(ptr->left);
        preorder(ptr->right);
     }
+=======
 //this function is for insertion
-void BST::insert(node *tree, node *newnode)//NAMAN
+void BST::insert(node *tree, node *newnode)
 {
 	if (root == NULL)
 	{
@@ -159,58 +163,9 @@ void BST::insert(node *tree, node *newnode)//NAMAN
 		{
 			insert(tree->left, newnode);
 		}
+=======
 };
-	else
-		{
-			tree->left = newnode;
-			(tree->left)->left = NULL;
-			(tree->left)->right = NULL;
-			cout << "Node Added To Left" << endl;
-			return;
-		}
-	}
-	else
-	{
-		if (tree->right != NULL)
-		{
-			insert(tree->right, newnode);
-		}
-		else
-		{
-			tree->right = newnode;
-			(tree->right)->left = NULL;
-			(tree->right)->right = NULL;
-			cout << "Node Added To Right" << endl;
-			return;
-		}
-	}
-}
-//this function is for deleting
-void BST::del(int item)//NAMAN
-{
-	node *parent, *location;
-	if (root == NULL)
-	{
-		cout << "Tree empty" << endl;
-		return;
-	}
-	find(item, &parent, &location);
-	if (location == NULL)
-	{
-		cout << "Item not present in tree" << endl;
-		return;
-	}
-	if (location->left == NULL && location->right == NULL)
-		case_a(parent, location);
-	if (location->left != NULL && location->right == NULL)
-		case_b(parent, location);
-	if (location->left == NULL && location->right != NULL)
-		case_b(parent, location);
-	if (location->left != NULL && location->right != NULL)
-		case_c(parent, location);
-	free(location);
-}
-int main()//ASEEM
+int main()
 {
     int choice, num;
     BST bst;
@@ -272,6 +227,56 @@ int main()//ASEEM
             cout<<"Wrong choice"<<endl;
         }
     }
-    return 0;
 }
+>>>>>>> aseem
 
+	else
+		{
+			tree->left = newnode;
+			(tree->left)->left = NULL;
+			(tree->left)->right = NULL;
+			cout << "Node Added To Left" << endl;
+			return;
+		}
+	}
+	else
+	{
+		if (tree->right != NULL)
+		{
+			insert(tree->right, newnode);
+		}
+		else
+		{
+			tree->right = newnode;
+			(tree->right)->left = NULL;
+			(tree->right)->right = NULL;
+			cout << "Node Added To Right" << endl;
+			return;
+		}
+	}
+}
+//this function is for deleting
+void BST::del(int item)
+{
+	node *parent, *location;
+	if (root == NULL)
+	{
+		cout << "Tree empty" << endl;
+		return;
+	}
+	find(item, &parent, &location);
+	if (location == NULL)
+	{
+		cout << "Item not present in tree" << endl;
+		return;
+	}
+	if (location->left == NULL && location->right == NULL)
+		case_a(parent, location);
+	if (location->left != NULL && location->right == NULL)
+		case_b(parent, location);
+	if (location->left == NULL && location->right != NULL)
+		case_b(parent, location);
+	if (location->left != NULL && location->right != NULL)
+		case_c(parent, location);
+	free(location);
+}
