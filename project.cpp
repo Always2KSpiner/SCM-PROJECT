@@ -44,6 +44,7 @@ int main()
         cout<<".................."<<endl;
         cout<<"1.Preorder Traversal"<<endl;
         cout<<"2.Display"<<endl;
+        cout<<"3.Quit"<<endl;
         cout<<"Enter your choice : ";
 
         cin>>choice;
@@ -62,7 +63,10 @@ int main()
             cout<<"Display BST:"<<endl;
             bst.display(root,1);
             cout<<endl;
-            break;      
+            break;     
+	    case 4:
+
+            exit(1);
 
         default:
 
