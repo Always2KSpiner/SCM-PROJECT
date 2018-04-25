@@ -29,6 +29,20 @@ class BST
         inorder(ptr->right);
     }
 }
+         void postorder(node *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+    }
+    if (ptr != NULL)
+    {
+        postorder(ptr->left);
+        postorder(ptr->right);
+        cout<<ptr->info<<"  ";
+    }
+}
         void display(node *ptr, int level)
 {
     int i;
@@ -52,3 +66,4 @@ class BST
             root = NULL;
         }
 };
+
